@@ -10,10 +10,10 @@ ifdef::env-github[]
 endif::[]
 = BPjs State Space Mapper
 
-[NOTE]
-The code in this repository captures the state of the application when it was used to generate figures for the paper. The StateSpaceMapper project is a separate project, whose repository is available link:https://github.com/bThink-BGU/StateSpaceMapper<here>.
+[IMPORTANT]
+The code in this repository captures the state of the application when it was used to generate figures for the paper. The StateSpaceMapper project is a separate project, whose repository is available link:https://github.com/bThink-BGU/StateSpaceMappe[here].
 
-A very simple proof of concept program, that generates a drawing of the transition system of https://github.com/bthink-BGU/bpjs[BPjs] b-programs. Relies on http://graphviz.org[Graphviz] to do the actual drawing. 
+A very simple proof of concept program, for generating drawings of transition system of https://github.com/bthink-BGU/bpjs[BPjs] b-programs. The output of this program is in the Dot langauge; it relies on http://graphviz.org[Graphviz] to do the actual drawing. 
 
 Node names are given by a b-thread called `stateTitler`. This b-thread passes the title in its sync statement data field.
 
