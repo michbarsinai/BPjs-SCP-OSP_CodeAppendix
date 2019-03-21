@@ -18,7 +18,7 @@ _This is a code appendix for a paper submitted to Science of Computer Programmin
 link:hello-world[]::
     The hello-world program presented at section 4.1.
 
-link:GUI MazeRunner[]::
+link:GUI%20MazeRunner[GUI MazeRunner]::
     GUI application for editing, running, and analyzing maze simulations. It also demonstrates how to use BPjs to embed a b-program in a traditional application. Presented at section 4.2.
 
 link:StateSpaceMapper[]::
