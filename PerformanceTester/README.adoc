@@ -16,8 +16,8 @@ Run this application from a terminal:
 
     MAVEN_OPTS=-Xmx16G mvn exec:java
 
-[NOTE]
-Please keep these:
+
+==== Notes
 * This project uses https://github.com/bThink-BGU/BPjs[BPjs].
 * BPjs uses the Mozilla Rhino Javascript engine. See https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino[project page and source code].
 
