@@ -9,7 +9,7 @@ order.js::
     Additional b-thread that imposes order over the `hello-world` b-program, such that `hello` always proceeds `world`.
 
 stateTitler.js::
-    When drawing the b-program's state space using link:../StateSpaceMapper<StateSpaceMapper>, this b-thread gives program states human readable names.
+    When drawing the b-program's state space using link:../StateSpaceMapper[StateSpaceMapper], this b-thread gives program states human readable names.
 
 [INFO]
 To run this program, use:

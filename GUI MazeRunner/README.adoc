@@ -11,7 +11,7 @@ endif::[]
 == GUI MazeRunner
 
 [NOTE]
-The code in this repository captures the state of the application when it was used to generate figures for the paper. The main repository of this project, which may have evolved since the paper has been submitted, is available link:https://github.com/bThink-BGU/VisualRunningExamples<here>.
+The code in this repository captures the state of the application when it was used to generate figures for the paper. The main repository of this project, which may have evolved since the paper has been submitted, is available link:https://github.com/bThink-BGU/VisualRunningExamples[here].
 
 
 This project contains sample b-programs whose execution and verification
@@ -26,7 +26,7 @@ application.
 === Running from the commandline:
 
 Preconditions::
-    You'll need Java and link:https://maven.apache.org<Apache Maven>.
+    You'll need Java and link:https://maven.apache.org[Apache Maven].
 
 Running::
     1. With your terminal app, navigate to the project's directory
