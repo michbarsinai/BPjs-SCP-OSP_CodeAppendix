@@ -1,6 +1,8 @@
 = "Hello, World" Example
 
-This directory contains the code for the "hello world" program described in Section 4.1. Contents:
+This directory contains the code for the "hello world" program described in Section 4.1.
+
+== Contents:
 
 hello-world.js::
     Mail "hello world" code, contains b-threads the request `hello` and `world`.
