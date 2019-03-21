@@ -5,15 +5,15 @@ This directory contains the code for the "hello world" program described in Sect
 == Contents:
 
 hello-world.js::
-    Mail "hello world" code, contains b-threads the request `hello` and `world`.
+    Main "hello world" code, contains b-threads that request `hello` and `world`.
 
 order.js::
-    Additional b-thread that imposes order over the `hello-world` b-program, such that `hello` always proceeds `world`.
+    Additional b-thread for ensuring that `hello` always proceeds `world`.
 
 stateTitler.js::
     When drawing the b-program's state space using link:../StateSpaceMapper[StateSpaceMapper], this b-thread gives program states human readable names.
 
-[INFO]
+
 To run this program, use:
 
     java -jar BPjs.jar hello-world.js order.js
