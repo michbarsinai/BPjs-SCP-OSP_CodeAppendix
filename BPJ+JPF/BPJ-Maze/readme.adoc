@@ -1,6 +1,17 @@
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :page_with_curl:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
 = BPJ-Maze
 
-A maze simulation b-program based on link:../BPJ-equal[BPJ-equal]. Files link:run-1.txt[] to link:run-5.txt[] contain the execution summary of JPF, using various parameters and over various programs. The specific details are notes in these files.
+A maze simulation b-program based on link:../BPJ-equal[BPJ-equal]. Files link:run-1.txt[] to link:run-5.txt[] contain the execution summary of JPF, using various parameters and over various programs. The specific details are noted in these files.
 
 == Running the code here
 
