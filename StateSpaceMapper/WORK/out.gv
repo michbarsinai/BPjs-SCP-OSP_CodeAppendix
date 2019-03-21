@@ -1,0 +1,11 @@
+digraph extras_ratio_js {
+label="extras-ratio.js"
+start [shape=none fontcolor=blue label="start"]
+bpss8e9e8cfd[label="8e9e8cfd"]
+start -> bpss8e9e8cfd [color=blue]
+bpssf265bd60[label="f265bd60" penwidth=2 color="#888800" ]
+bpss8e9e8cfd -> bpssf265bd60[label="ADD_EXTRAS"]
+bpssa45d4e4[label="a45d4e4" penwidth=2 color="#888800" ]
+bpssf265bd60 -> bpssa45d4e4[label="ADD_EXTRAS"]
+bpssa45d4e4 -> bpssf265bd60[label="[BEvent name:ADD_EXTRAS data:{blueberries=>0.0,kales=>1.0}]"]
+}
