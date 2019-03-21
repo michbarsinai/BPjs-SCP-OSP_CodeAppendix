@@ -1,6 +1,6 @@
 = BPJ-Maze
 
-A maze simulation b-program based on link:../BPJ-equal[]. Files link:run-1.txt[] to link:run-5.txt[] contain the execution summary of JPF, using various parameters and over various programs. The specific details are notes in these files.
+A maze simulation b-program based on link:../BPJ-equal[BPJ-equal]. Files link:run-1.txt[] to link:run-5.txt[] contain the execution summary of JPF, using various parameters and over various programs. The specific details are notes in these files.
 
 == Running the code here
 
