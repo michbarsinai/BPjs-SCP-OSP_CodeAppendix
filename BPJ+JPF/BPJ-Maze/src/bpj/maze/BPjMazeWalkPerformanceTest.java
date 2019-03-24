@@ -22,31 +22,31 @@ import static java.util.stream.Collectors.joining;
  *
  * @author michael
  */
-public class BPjMaze {
+public class BPjMazeWalkPerformanceTest {
 
     /**
      * @param argArr the command line arguments
      */
     public static void main(String[] argArr) {
         
-        Set<String> args = new HashSet<>(Arrays.asList(argArr));
-        BProgram bprog = new BProgram();
-
-        if ( args.contains("jpf-sanity") ) {
-            miniBackTrack();
-            return;
-        }
-        if ( args.contains("bpj-sanity") ) {
-            miniBProg();
-            return;
-        }
-        boolean explode = args.contains("explode");
-        args.remove("explode");
+        BPjMazeWalkPerformanceTest ptest = new BPjMazeWalkPerformanceTest();
         
-        int mazeSize = 7;
-        if ( ! args.isEmpty() ) {
-            mazeSize = Integer.parseInt(args.iterator().next());
-        }     
+        System.out.println("#warmup");
+        System.out.println(ptest.singleRun(10));
+        System.out.println("#warmup done");
+        
+        int repetitions = 10;
+        Arrays.asList(5,10,20,50,100).forEach( size -> {
+            for ( int i=00; i<repetitions; i++ ) {
+                System.out.println( "-" + size + "," + ptest.singleRun(size) );
+            }
+        });
+        System.out.println( ptest.singleRun(10) );
+        
+    }
+    
+    long singleRun( int mazeSize ) {
+        BProgram bprog = new BProgram();
         int id=0;
         for ( int x=0; x<mazeSize; x++ ) {
             for ( int y=0; y<mazeSize; y++ ) {
@@ -55,16 +55,14 @@ public class BPjMaze {
         }        
         
         bprog.add( new StartCell(0,0), (double)(++id) );
-        bprog.add( new TrapCell(mazeSize-1,mazeSize-1), (double)(++id) );
+        bprog.add( new TrapAfter1000Cell(), (double)(++id) );
         
-        if ( explode ) {
-            bprog.add(new ExploderBT(), (double)(++id));
-        }
-        
-        
+        long startTime = System.currentTimeMillis();
         bprog.startAll();
         bprog.joinAll();
-        System.out.println("main DONE");
+        long endTime = System.currentTimeMillis();
+        
+        return endTime - startTime;
     }
     
     static class BTCell extends BThread {
@@ -115,21 +113,21 @@ public class BPjMaze {
         }
     }
     
-    static class TrapCell extends BThread {
-        int x;
-        int y;
+    static class TrapAfter1000Cell extends BThread {
 
-        public TrapCell(int x, int y) {
-            this.x = x;
-            this.y = y;
-            setName("s:" + x + "," + y);
+        public TrapAfter1000Cell() {
+            setName("trap after 1000");
         }
         
         @Override
         public void runBThread() throws InterruptedException, BPJRequestableSetException {
-            getBProgram().bSync( none, new Events.EntryEvent(x, y), none);
+            int stepCount = 0;
+            
+            while( stepCount < 1000 ) {
+                getBProgram().bSync( none, Events.ENTRY_EVENTS, none);
+                stepCount++;
+            }
             getBProgram().bSync( Events.TRAPPED, none, Events.ENTRY_EVENTS);
-            System.out.println("Trap done");
         }
     }
     

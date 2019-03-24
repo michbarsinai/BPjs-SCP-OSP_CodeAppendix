@@ -30,6 +30,9 @@ The code snippets below assume that the path to JPF is in `$JPF`
 
     $JPF/bin/jpf +cg.enumerate_random=true +classpath=lib/BPj-equal.jar:dist/BPj-Maze.jar bpj.maze.BPjMaze
 
+* To run the execution performance test, use the `bpj.maze.BPjMazeWalkPerformanceTest` class:
+
+    java -cp lib/BPj-equal.jar:dist/BPj-Maze.jar bpj.maze.BPjMazeWalkPerformanceTest
 
 [WARNING]
 Libraries and binaries need to be compiled for Java8. A recent version of Java 8 must be used, because JPF uses some low-level classes that are not present in, e.g., 1.8.0._161. We used 1.8.0_201 for our tests.

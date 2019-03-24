@@ -46,20 +46,11 @@
       </build>
     </profile>
   </profiles>
-  <dependencies>
-    <dependency>
-      <groupId>com.github.bthink-bgu</groupId>
-      <artifactId>BPjs</artifactId>
-      <version>0.10.2</version>
-      <scope>system</scope>
-      <systemPath>/Users/michael/Documents/PhD/Thesis/code/bThink-BGU/BPjs/target/BPjs-0.10.2-SNAPSHOT.jar</systemPath>
-    </dependency>
-  </dependencies>
   <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <exec.mainClass>il.ac.bgu.cs.bp.performancetest.RandomWalkSingleMaze</exec.mainClass>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 </project>
 
